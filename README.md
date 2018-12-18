@@ -1,6 +1,8 @@
 # mock-Netflix-like-page
 
-codepen link:
+codepen link:https://codesandbox.io/s/github/WenfeiH/mock-Netflix-like-page<br>
+demo: https://y0vj35p5m9.codesandbox.io/<br>
+
 git clone https://github.com/WenfeiH/mock-Netflix-like-page.git<br>
 goes into mock-Netflix-like-page folder</br>
 First, <strong>npm install</strong></br>
