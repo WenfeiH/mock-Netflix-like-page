@@ -4,7 +4,9 @@ const Film = props => {
     <div className="film">
       <img src={props.img} alt={props.title} />
       <p>{props.title}</p>
-      <button onClick={props.onClick}>{props.button}</button>
+      <button onClick={props.onClick} className={props.button}>
+        {props.button}
+      </button>
     </div>
   );
 };

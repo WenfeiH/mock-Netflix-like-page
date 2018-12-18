@@ -1,24 +1,22 @@
 import React, { Component } from "react";
-import { lists } from "../mockData";
+import * as actions from "../action";
 import { connect } from "react-redux";
+import Header from "./Header";
 import MyList from "./MyList";
 import Recommendation from "./Recommendation";
-import MyListTitle from "./MyListTitle";
-import "./App.css";
+import Footer from "./Footer";
 
 class App extends Component {
   componentDidMount() {
-    this.props.dispatch({ type: "FETCH_MOCK_DATA", lists });
+    this.props.dispatch(actions.getAllData());
   }
   render() {
     return (
       <React.Fragment>
-        <header>
-          <h1>Netfilx</h1>
-        </header>
+        <Header />
         <MyList />
         <Recommendation />
-        <MyListTitle />
+        <Footer />
       </React.Fragment>
     );
   }

@@ -2,13 +2,21 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Helvetica;
 }
-div {
-  text-align: center;
+body {
+  background-color: black;
+  color: white;
 }
+#netflix-logo {
+  fill: #e50914;
+  margin: 10px auto;
+  height: 20%;
+  width: 20%;
+}
+
 .flex-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 .film {
@@ -16,8 +24,16 @@ div {
   text-align: center;
 }
 button {
-  padding: 2px;
+  color:white;
+  border: none;
+  padding:4px;
   visibility: hidden;
+}
+.Add{
+  background-color:blue;
+}
+.Remove{
+  background-color:red;
 }
 .film:hover > button {
   visibility: visible;
@@ -26,3 +42,4 @@ li {
   display: inline-block;
   padding: 0 10px;
 }
+

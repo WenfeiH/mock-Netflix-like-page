@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-const MyListTitle = props => {
+const Footer = props => {
   const { myList } = props;
   return (
     <div>
@@ -19,4 +19,4 @@ const mapStatetoProps = state => {
   return { myList: state.mylist };
 };
 
-export default connect(mapStatetoProps)(MyListTitle);
+export default connect(mapStatetoProps)(Footer);

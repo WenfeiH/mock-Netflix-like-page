@@ -1,33 +1,22 @@
-import Film from "./Film";
 import React from "react";
+import List from "./ListTemplate";
 import { connect } from "react-redux";
 const MyList = props => {
   const onClick = item => {
     props.dispatch({ type: "REMOVE_FROM_LIST", item });
   };
-  const { myList } = props;
+  const { list } = props;
   return (
-    <div>
-      <h3>MyList</h3>
-      <div className="flex-container">
-        {myList.length === 0 ? (
-          <p>None</p>
-        ) : (
-          myList.map(item => (
-            <Film
-              {...item}
-              button="Remove"
-              onClick={() => onClick(item)}
-              key={item.id}
-            />
-          ))
-        )}
-      </div>
-    </div>
+    <List
+      listTitle="My List"
+      onClick={onClick}
+      list={list}
+      btnContent="Remove"
+    />
   );
 };
 const mapStatetoProps = state => {
-  return { myList: state.mylist };
+  return { list: state.mylist };
 };
 
 export default connect(mapStatetoProps)(MyList);
